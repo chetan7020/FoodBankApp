@@ -50,7 +50,7 @@
         android:layout_marginBottom="30dp"
         android:fontFamily="@font/poppins_medium"
         android:textColor="@color/white"
-        android:hint="Enter your email"
+        android:hint="Enter your email github"
         android:inputType="textEmailAddress"
         android:padding="12dp"
         android:paddingHorizontal="10dp" />
