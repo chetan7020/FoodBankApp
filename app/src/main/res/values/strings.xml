@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Feed The Need</string>
+        <string-array name="user_array">
+            <item>Customer</item>
+            <item>Provider</item>
+            <item>Admin</item>
+        </string-array>
 </resources>
