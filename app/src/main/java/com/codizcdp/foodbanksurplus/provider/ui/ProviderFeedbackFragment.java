@@ -16,7 +16,6 @@ public class ProviderFeedbackFragment extends Fragment {
 
     private void init(){
         initialize();
-
     }
 
     private void initialize(){
