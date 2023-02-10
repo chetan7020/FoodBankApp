@@ -41,19 +41,55 @@
         />
 
     <EditText
-        android:id="@+id/etSignUpEmail"
+        android:id="@+id/etSignUpName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="25dp"
         android:layout_below="@id/img1"
         android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/email"
+        android:drawablePadding="10dp"
         android:fontFamily="@font/poppins_medium"
-        android:textColor="@color/white"
-        android:hint="Enter your email github"
+        android:hint="Enter your email"
         android:inputType="textEmailAddress"
         android:padding="12dp"
         android:paddingHorizontal="10dp" />
+
+    <EditText
+        android:id="@+id/etSignUpEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_below="@id/etSignUpName"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/profile_svg"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/poppins_medium"
+        android:hint="Enter your name"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        android:paddingHorizontal="10dp" />
+    <EditText
+        android:id="@+id/etSignUpPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_below="@id/etSignUpEmail"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/password_svg"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/poppins_medium"
+        android:hint="Enter your name"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        android:paddingHorizontal="10dp" />
+
 
 
 </RelativeLayout>
