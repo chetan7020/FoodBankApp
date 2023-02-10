@@ -6,10 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".UserLoginActivity">
 
+    <View
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@color/theme" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/topView"
+        android:background="@drawable/theme_wave"/>
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello user!"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Feed The Need"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:textSize="30sp"
+        android:textColor="@color/white"
         />
+
 
 </RelativeLayout>
