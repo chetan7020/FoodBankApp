@@ -7,8 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="theme">#19a73f</color>
-    <color name="backup_theme">#2DB6A3</color>
 
+    <color name="bg_color">#d1edbf</color>
+
+    <color name="light_black">#30322d</color>
+    <color name="green">#19a73f</color>
+    <color name="light_grey">#e8e8ea</color>
+    <color name="light_green">#ECF6EF</color>
 
 </resources>
