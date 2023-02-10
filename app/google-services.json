@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "916011253008",
+    "project_id": "foodbanksurplus",
+    "storage_bucket": "foodbanksurplus.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:916011253008:android:c0bc64873b5eca29a7f995",
+        "android_client_info": {
+          "package_name": "com.codizcdp.foodbanksurplus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "916011253008-2iqionuomqnjc3vr0uc2puhfmsq3hlag.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuwNrXjNqaf3ejc6xi1F7C7Dm7sKFOqn8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "916011253008-2iqionuomqnjc3vr0uc2puhfmsq3hlag.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
