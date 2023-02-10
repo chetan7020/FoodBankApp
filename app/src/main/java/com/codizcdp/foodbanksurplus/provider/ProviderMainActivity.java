@@ -6,7 +6,6 @@ import com.codizcdp.foodbanksurplus.R;
 import com.codizcdp.foodbanksurplus.databinding.ActivityProviderMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
