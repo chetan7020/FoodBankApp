@@ -7,29 +7,17 @@
     android:background="@color/theme"
     tools:context=".UserLoginActivity">
 
-<!--    <View-->
-<!--        android:id="@+id/topView"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="170dp"-->
-<!--        android:background="@color/theme" />-->
 
-<!--    <View-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="80dp"-->
-<!--        android:layout_below="@id/topView"-->
-<!--        android:background="@drawable/theme_wave"/>-->
-
-
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:fontFamily="@font/poppins_medium"-->
-<!--        android:text="Feed The Need"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:layout_marginTop="15dp"-->
-<!--        android:textSize="30sp"-->
-<!--        android:textColor="@color/white"-->
-<!--        />-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Feed The Need"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        />
 
     <View
         android:id="@+id/img1"
@@ -48,11 +36,11 @@
         android:layout_below="@id/img1"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="10dp"
-        android:background="@color/white"
-        android:drawableLeft="@drawable/email"
+        android:background="@drawable/round_et"
+        android:drawableLeft="@drawable/profile_svg"
         android:drawablePadding="10dp"
         android:fontFamily="@font/poppins_medium"
-        android:hint="Enter your email"
+        android:hint="Enter your name"
         android:inputType="textEmailAddress"
         android:padding="12dp"
         android:paddingHorizontal="10dp" />
@@ -65,11 +53,11 @@
         android:layout_below="@id/etSignUpName"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:background="@color/white"
-        android:drawableLeft="@drawable/profile_svg"
+        android:background="@drawable/round_et"
+        android:drawableLeft="@drawable/email"
         android:drawablePadding="10dp"
         android:fontFamily="@font/poppins_medium"
-        android:hint="Enter your name"
+        android:hint="Enter your email"
         android:inputType="textEmailAddress"
         android:padding="12dp"
         android:paddingHorizontal="10dp" />
@@ -81,14 +69,40 @@
         android:layout_below="@id/etSignUpEmail"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:background="@color/white"
+        android:background="@drawable/round_et"
         android:drawableLeft="@drawable/password_svg"
         android:drawablePadding="10dp"
         android:fontFamily="@font/poppins_medium"
-        android:hint="Enter your name"
+        android:hint="Enter your password"
         android:inputType="textEmailAddress"
         android:padding="12dp"
         android:paddingHorizontal="10dp" />
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/etSignUpPassword"
+        android:background="@drawable/round_bg"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textColor="@color/theme"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/submitBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Already Have An Account? Login Now"
+        android:textColor="@color/white" />
+
 
 
 
