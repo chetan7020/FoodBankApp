@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme"
+    tools:context=".UserLoginActivity">
+
+<!--    <View-->
+<!--        android:id="@+id/topView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="170dp"-->
+<!--        android:background="@color/theme" />-->
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="80dp"-->
+<!--        android:layout_below="@id/topView"-->
+<!--        android:background="@drawable/theme_wave"/>-->
+
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:fontFamily="@font/poppins_medium"-->
+<!--        android:text="Feed The Need"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:textSize="30sp"-->
+<!--        android:textColor="@color/white"-->
+<!--        />-->
+
+    <View
+        android:id="@+id/img1"
+        android:layout_width="356dp"
+        android:layout_height="255dp"
+        android:background="@drawable/login_user_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        />
+
+    <EditText
+        android:id="@+id/etSignUpEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_below="@id/img1"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/white"
+        android:hint="Enter your email github"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        android:paddingHorizontal="10dp" />
+
+
+</RelativeLayout>
