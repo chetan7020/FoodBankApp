@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_food">
+
+    <fragment
+        android:id="@+id/navigation_feedback"
+        android:name="com.codizcdp.foodbanksurplus.provider.ui.ProviderFeedbackFragment"
+        android:label="Feedback"
+        tools:layout="@layout/provider_fragment_feedback" />
+
+    <fragment
+        android:id="@+id/navigation_order"
+        android:name="com.codizcdp.foodbanksurplus.provider.ui.ProviderOrderFragment"
+        android:label="Orders"
+        tools:layout="@layout/provider_fragment_order" />
+
+    <fragment
+        android:id="@+id/navigation_food"
+        android:name="com.codizcdp.foodbanksurplus.provider.ui.ProviderFoodFragment"
+        android:label="Food"
+        tools:layout="@layout/provider_fragment_food" />
+
+    <fragment
+        android:id="@+id/navigation_notice"
+        android:name="com.codizcdp.foodbanksurplus.provider.ui.ProviderNoticeFragment"
+        android:label="Notice"
+        tools:layout="@layout/provider_fragment_notice" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.codizcdp.foodbanksurplus.provider.ui.ProviderProfileFragment"
+        android:label="Notice"
+        tools:layout="@layout/provider_fragment_profile" />
+
+</navigation>
