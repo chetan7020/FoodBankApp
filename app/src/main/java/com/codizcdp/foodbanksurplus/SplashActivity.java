@@ -4,6 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.View;
+
+import com.codizcdp.foodbanksurplus.provider.ProviderMainActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -33,4 +37,8 @@ public class SplashActivity extends AppCompatActivity {
         };
         thread.start();
     }
+    public void nxtActivity(View view) {
+        startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+    }
+
 }
