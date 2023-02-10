@@ -3,9 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/hackthon_project/FoodBankSurplus/app/src/main/res/drawable/splash_button.xml" value="0.177" />
         <entry key="..\:/hackthon_project/FoodBankSurplus/app/src/main/res/layout/activity_main.xml" value="0.32135416666666666" />
         <entry key="..\:/hackthon_project/FoodBankSurplus/app/src/main/res/layout/activity_sign_up.xml" value="0.32135416666666666" />
-        <entry key="..\:/hackthon_project/FoodBankSurplus/app/src/main/res/layout/activity_splash_screen.xml" value="0.32135416666666666" />
+        <entry key="..\:/hackthon_project/FoodBankSurplus/app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
+        <entry key="..\:/hackthon_project/FoodBankSurplus/app/src/main/res/layout/activity_user_login.xml" value="0.2604474461798227" />
+        <entry key="..\:/hackthon_project/FoodBankSurplus/app/src/main/res/layout/items_list.xml" value="0.32135416666666666" />
         <entry key="..\:/hackthon_project/FoodBankSurplus/app/src/main/res/layout/spinner_layout.xml" value="0.32135416666666666" />
       </map>
     </option>
