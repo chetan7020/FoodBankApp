@@ -251,32 +251,32 @@
         android:layout_below="@id/locationLinerLayout">
 
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/etSpinner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="25dp">
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:id="@+id/etSpinner"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="25dp">-->
 
-            <Spinner
-                android:id="@+id/spinnerForType1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/splash_button"
-                android:drawablePadding="10dp"
-                android:fontFamily="@font/poppins_medium"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"/>
+<!--            <Spinner-->
+<!--                android:id="@+id/spinnerForType1"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/splash_button"-->
+<!--                android:drawablePadding="10dp"-->
+<!--                android:fontFamily="@font/poppins_medium"-->
+<!--                android:paddingLeft="20dp"-->
+<!--                android:paddingRight="20dp"-->
+<!--                android:paddingTop="20dp"-->
+<!--                android:paddingBottom="20dp"/>-->
 
-        </com.google.android.material.textfield.TextInputLayout>
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
 
 <!--        <com.google.android.material.textfield.TextInputLayout-->
 <!--            android:id="@+id/new_menu_drop"-->
 <!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"-->
 <!--            android:layout_width="match_parent"-->
 <!--            android:layout_height="wrap_content"-->
-<!--            android:hint="@string/select"-->
+<!--            android:hint="Select Food Category"-->
 <!--            android:layout_marginLeft="20dp"-->
 <!--            android:layout_marginRight="20dp"-->
 <!--            android:layout_marginBottom="25dp"-->
