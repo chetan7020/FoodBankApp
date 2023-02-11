@@ -1,237 +1,221 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CustomerRegister">
+    tools:context=".CustomerRegisterActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:src="@drawable/login_img"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Welcome to"
-            android:gravity="center"
-            android:layout_marginTop="50dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:textSize="20dp"
-            android:textColor="@color/black"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Feed the Need"
-            android:gravity="center"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="5dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:textSize="20dp"
-            android:textColor="@color/green"/>
-
-
-    </LinearLayout>
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:fontFamily="@font/poppins_medium"
-        android:gravity="center"
-        android:text="Customer Register"
-        android:textSize="16dp" />
-
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-
-
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/text_input_layout1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="20dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_username"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/splash_button"
-                android:drawableLeft="@drawable/ic_baseline_account_box_24"
-                android:drawablePadding="10dp"
-                android:fontFamily="@font/poppins_medium"
-                android:hint="Username"
-                android:paddingTop="30dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingBottom="20dp"/>
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/text_input_layout2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="25dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_pass"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/splash_button"
-                android:drawableLeft="@drawable/ic_baseline_assignment_turned_in_24"
-                android:drawablePadding="10dp"
-                android:fontFamily="@font/poppins_medium"
-                android:hint="Password"
-                android:paddingTop="30dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingBottom="20dp" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/text_input_layout3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="25dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/confirm_pass"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/splash_button"
-                android:drawableLeft="@drawable/ic_baseline_assignment_turned_in_24"
-                android:drawablePadding="10dp"
-                android:fontFamily="@font/poppins_medium"
-                android:hint="Confirm Password"
-                android:paddingTop="30dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingBottom="20dp" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sign Up"
-            android:textColor="@color/white"
-            android:padding="15dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:textSize="17dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:backgroundTint="@color/green"/>
-
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/login_img" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:gravity="center"
+            android:gravity="center_horizontal"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="For Provider Register?"
+                android:layout_marginTop="50dp"
                 android:fontFamily="@font/poppins_semibold"
-                android:textAlignment="center"
-                android:gravity="center_horizontal"/>
+                android:gravity="center"
+                android:text="Welcome to"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
 
             <TextView
-                android:id="@+id/provider_register"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Click here"
-                android:paddingLeft="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="50dp"
                 android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:text="Feed the Need"
                 android:textColor="@color/green"
-                android:textAlignment="center"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center_horizontal"/>
-
+                android:textSize="20dp" />
 
 
         </LinearLayout>
 
 
-    </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="Customer Register"
+            android:textSize="16dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/splash_button"
+                    android:drawableLeft="@drawable/ic_baseline_account_box_24"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:hint="Username"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="30dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="20dp"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="25dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/splash_button"
+                    android:drawableLeft="@drawable/ic_baseline_assignment_turned_in_24"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:hint="Password"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="30dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="20dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="25dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/confirm_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/splash_button"
+                    android:drawableLeft="@drawable/ic_baseline_assignment_turned_in_24"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:hint="Confirm Password"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="30dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="20dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="40dp"
+                android:backgroundTint="@color/green"
+                android:fontFamily="@font/poppins_semibold"
+                android:padding="15dp"
+                android:text="Sign Up"
+                android:textColor="@color/white"
+                android:textSize="17dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center_horizontal"
+                    android:text="For Provider Register?"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/provider_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="5dp"
+                    android:text="Click here"
+                    android:textAlignment="center"
+                    android:textColor="@color/green" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
 
     </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:gravity="center"
         android:layout_marginBottom="20dp"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Already have an account?"
             android:fontFamily="@font/poppins_semibold"
-            android:textAlignment="center"
-            android:gravity="center_horizontal"/>
+            android:gravity="center_horizontal"
+            android:text="Already have an account?"
+            android:textAlignment="center" />
 
         <TextView
             android:id="@+id/login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Login"
-            android:paddingLeft="5dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:textColor="@color/green"
-            android:textAlignment="center"
             android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal"/>
-
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center_horizontal"
+            android:paddingLeft="5dp"
+            android:text="Login"
+            android:textAlignment="center"
+            android:textColor="@color/green" />
 
 
     </LinearLayout>
-
-
-
-
-
-
-
 
 
 </RelativeLayout>
