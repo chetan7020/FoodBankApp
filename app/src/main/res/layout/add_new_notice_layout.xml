@@ -58,7 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/splash_button"
-            android:drawableLeft="@drawable/food_svg1"
+            android:drawableLeft="@drawable/food_svg2"
             android:drawablePadding="20dp"
             android:fontFamily="@font/poppins_medium"
             android:hint="Enter Notice Description!"
