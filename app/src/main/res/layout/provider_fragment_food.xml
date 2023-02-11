@@ -71,7 +71,7 @@
         android:layout_gravity="bottom|end"
         android:layout_marginRight="30dp"
         android:layout_marginBottom="30dp"
-        android:src="@drawable/addbtnsvg"
+        android:src="@drawable/plus"
         app:backgroundTint="@color/white"
         app:maxImageSize="57dp"/>
 
