@@ -2,7 +2,6 @@ package com.codizcdp.foodbanksurplus;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,15 +10,17 @@ import android.widget.TextView;
 public class CustomerRegister extends AppCompatActivity {
 
     TextView provider_register,login;
-    @SuppressLint("MissingInflatedId")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_register);
+
         provider_register = findViewById(R.id.provider_register);
         login = findViewById(R.id.login);
 
-
+        provider_register = findViewById(R.id.provider_register);
+        login = findViewById(R.id.login);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +37,5 @@ public class CustomerRegister extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 }
