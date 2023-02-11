@@ -1,13 +1,13 @@
 package com.codizcdp.foodbanksurplus;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.codizcdp.foodbanksurplus.provider.ProviderMainActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -23,7 +23,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ProviderRegister extends AppCompatActivity {
-
     private TextInputEditText etName, etFoodCompanyName, etPhoneNumber, etGmail, etPass;
     private Button btnSignUp;
     private static final String TAG = "ProviderRegister";

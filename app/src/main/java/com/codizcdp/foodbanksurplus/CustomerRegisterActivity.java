@@ -114,7 +114,7 @@ public class CustomerRegisterActivity extends AppCompatActivity {
         provider_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CustomerRegisterActivity.this, DummyProviderRegisterActivity.class);
+                Intent intent = new Intent(CustomerRegisterActivity.this, ProviderRegister.class);
                 startActivity(intent);
             }
         });
