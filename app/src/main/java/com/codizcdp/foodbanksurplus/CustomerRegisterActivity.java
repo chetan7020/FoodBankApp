@@ -1,15 +1,14 @@
 package com.codizcdp.foodbanksurplus;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class CustomerRegister extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
 
-    TextView provider_register,login;
+public class CustomerRegisterActivity extends AppCompatActivity {
+    TextView provider_register, login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +24,7 @@ public class CustomerRegister extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CustomerRegister.this,LoginActivity.class);
+                Intent intent = new Intent(CustomerRegisterActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
@@ -33,7 +32,7 @@ public class CustomerRegister extends AppCompatActivity {
         provider_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CustomerRegister.this,ProviderRegister.class);
+                Intent intent = new Intent(CustomerRegisterActivity.this, ProviderRegister.class);
                 startActivity(intent);
             }
         });
