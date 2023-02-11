@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.codizcdp.foodbanksurplus.provider.ProviderMainActivity;
@@ -26,7 +27,7 @@ public class ProviderRegister extends AppCompatActivity {
     private TextInputEditText etName, etFoodCompanyName, etPhoneNumber, etGmail, etPass;
     private Button btnSignUp;
     private static final String TAG = "ProviderRegister";
-
+    private TextView tvLogin;
     private FirebaseAuth firebaseAuth;
     private FirebaseFirestore firebaseFirestore;
 
@@ -36,11 +37,19 @@ public class ProviderRegister extends AppCompatActivity {
         etPhoneNumber = findViewById(R.id.etPhoneNumber);
         etGmail = findViewById(R.id.etGmail);
         etPass = findViewById(R.id.etPass);
+        tvLogin = findViewById(R.id.tvLoginNow);
 
         btnSignUp = findViewById(R.id.btnSignUp);
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
+
+        tvLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+            }
+        });
     }
 
     private void init() {
