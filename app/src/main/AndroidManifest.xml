@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -36,17 +36,20 @@
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
             android:name=".SplashActivity"
-            android:exported="false" />
-        <activity
-            android:name=".provider.ProviderMainActivity"
-            android:exported="true"
-            android:label="@string/title_activity_provider_main"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
+            android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".provider.ProviderMainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_provider_main"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
 
             <meta-data
                 android:name="android.app.lib_name"
