@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".AddNewFoodFragment">
 
     <LinearLayout
@@ -269,6 +270,32 @@
                 android:paddingBottom="20dp"/>
 
         </com.google.android.material.textfield.TextInputLayout>
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:id="@+id/new_menu_drop"-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="@string/select"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:layout_marginBottom="25dp"-->
+<!--            android:background="@drawable/splash_button"-->
+<!--            android:outlineSpotShadowColor="@color/green"-->
+<!--            app:hintTextColor="@color/green"-->
+<!--            android:textColorHint="@color/green"-->
+<!--            app:boxStrokeColor="@color/green">-->
+
+<!--            <AutoCompleteTextView-->
+<!--                android:id="@+id/drop_items"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:inputType="none"-->
+<!--                android:text="Choose your module"-->
+<!--                />-->
+
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
 
 
     </LinearLayout>
