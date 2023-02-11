@@ -18,4 +18,5 @@
 
     <string name="select">Select Items</string>
     <string name="select1">Select Food Items</string>
+    <string name="title_activity_customer_main">CustomerMainActivity</string>
 </resources>

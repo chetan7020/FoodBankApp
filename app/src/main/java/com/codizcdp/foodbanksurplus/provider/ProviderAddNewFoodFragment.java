@@ -1,4 +1,4 @@
-package com.codizcdp.foodbanksurplus;
+package com.codizcdp.foodbanksurplus.provider;
 
 import android.os.Bundle;
 
@@ -8,11 +8,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.codizcdp.foodbanksurplus.R;
 
-public class AddNewFoodFragment extends Fragment {
+
+public class ProviderAddNewFoodFragment extends Fragment {
 
 
-    public AddNewFoodFragment() {
+    public ProviderAddNewFoodFragment() {
         // Required empty public constructor
     }
 

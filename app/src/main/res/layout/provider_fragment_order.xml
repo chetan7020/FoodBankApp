@@ -41,94 +41,29 @@
     </RelativeLayout>
 
     <ScrollView
-        android:layout_below="@id/relLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/relLayout1"
         android:layout_marginTop="20dp">
-
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <include layout="@layout/provider_order_layout" />
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="5dp"
-                android:backgroundTint="@color/light_green"
-                android:layout_height="wrap_content">
+            <include layout="@layout/provider_order_layout" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="20dp"
-                    android:orientation="vertical">
+            <include layout="@layout/provider_order_layout" />
 
+            <include layout="@layout/provider_order_layout" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="25/02/2004"
-                        android:fontFamily="@font/poppins_semibold"/>
+            <include layout="@layout/provider_order_layout" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+            <include layout="@layout/provider_order_layout" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Rice plate roti"
-                            android:textSize="18dp"
-                            android:textStyle="bold"
-                            android:fontFamily="@font/poppins_semibold"
-                            android:textColor="@color/green"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="yash aher"
-                            android:textSize="16dp"
-                            android:textAlignment="textEnd"
-                            android:fontFamily="@font/poppins_medium"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Confirm"
-                            android:backgroundTint="@color/green"
-                            android:textColor="@color/white"/>
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Reject"
-                            android:layout_marginLeft="20dp"
-                            android:backgroundTint="@color/red"
-                            android:textColor="@color/white"/>
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-
-            </androidx.cardview.widget.CardView>
-
+            <include layout="@layout/provider_order_layout" />
 
         </LinearLayout>
 

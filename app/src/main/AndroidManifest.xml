@@ -13,6 +13,15 @@
         android:theme="@style/Theme.FoodBankSurplus"
         tools:targetApi="31">
         <activity
+            android:name=".customer.CustomerMainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_customer_main">
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".CustomerRegisterActivity"
             android:exported="false">
             <meta-data
@@ -25,9 +34,7 @@
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
             android:name=".SplashActivity"
-            android:exported="false">
-
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".provider.ProviderMainActivity"
             android:exported="true"

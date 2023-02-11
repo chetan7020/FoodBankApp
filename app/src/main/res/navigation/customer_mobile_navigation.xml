@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/customer_navigation_provider">
+
+    <fragment
+        android:id="@+id/customer_navigation_ordered_food"
+        android:name="com.codizcdp.foodbanksurplus.customer.ui.CustomerOrderedFoodFragment"
+        android:label="Ordered Food"
+        tools:layout="@layout/customer_fragment_profile" />
+
+    <fragment
+        android:id="@+id/customer_navigation_provider"
+        android:name="com.codizcdp.foodbanksurplus.customer.ui.CustomerProviderFragment"
+        android:label="Provider"
+        tools:layout="@layout/customer_fragment_provider" />
+
+    <fragment
+        android:id="@+id/customer_navigation_profile"
+        android:name="com.codizcdp.foodbanksurplus.customer.ui.CustomerProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/customer_fragment_orderes_food" />
+</navigation>
