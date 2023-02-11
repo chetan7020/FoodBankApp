@@ -17,7 +17,6 @@ import android.widget.TimePicker;
 
 import com.codizcdp.foodbanksurplus.R;
 
-
 public class ProviderAddNewFoodFragment extends Fragment {
     private View view;
     DatePickerDialog datePickerDialog;
