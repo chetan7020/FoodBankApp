@@ -1,15 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     tools:context=".provider.ui.ProviderOrderFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Order"
-        android:textSize="30sp" />
+    <RelativeLayout
+        android:id="@+id/relLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/round_corner"
+        android:elevation="10dp"
+        android:paddingStart="15dp">
 
-</LinearLayout>
+        <ImageView
+            android:id="@+id/ivSearch"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/magnify" />
+
+        <AutoCompleteTextView
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/ivSearch"
+            android:background="@null"
+            android:hint="Search Order Here"
+            android:imeOptions="actionSearch"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relLayout1"
+        android:layout_marginTop="20dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/provider_order_layout" />
+
+            <include layout="@layout/provider_order_layout" />
+
+            <include layout="@layout/provider_order_layout" />
+
+            <include layout="@layout/provider_order_layout" />
+
+            <include layout="@layout/provider_order_layout" />
+
+            <include layout="@layout/provider_order_layout" />
+
+            <include layout="@layout/provider_order_layout" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

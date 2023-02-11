@@ -17,7 +17,6 @@ public class ProviderOrderFragment extends Fragment {
     private void init(){
         initialize();
 
-
     }
 
     private void initialize(){
