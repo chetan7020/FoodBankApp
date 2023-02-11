@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".LoginActivity">
+    tools:context=".ProviderRegister">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -58,7 +58,7 @@
             android:layout_marginTop="5dp"
             android:fontFamily="@font/poppins_medium"
             android:gravity="center"
-            android:text="Keep your data safe!"
+            android:text="Provider SignUp"
             android:textSize="16dp" />
 
 
@@ -117,11 +117,42 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-
-            <com.google.android.material.button.MaterialButton
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Login"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select your Id Proof"
+                    android:padding="10dp"
+                    android:textSize="18dp"
+                    android:textColor="@color/green"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textStyle="bold"/>
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/baseline_add_24"
+                    android:backgroundTint="@color/green"/>
+
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
                 android:textColor="@color/white"
                 android:padding="15dp"
                 android:layout_margin="40dp"
@@ -146,7 +177,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dont have an account?"
+            android:text="Already have an account?"
             android:fontFamily="@font/poppins_semibold"
             android:textAlignment="center"
             android:gravity="center_horizontal"/>
@@ -154,7 +185,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Register"
+            android:text="Login"
             android:paddingLeft="5dp"
             android:fontFamily="@font/poppins_semibold"
             android:textColor="@color/green"
