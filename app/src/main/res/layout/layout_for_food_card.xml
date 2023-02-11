@@ -18,17 +18,51 @@
             android:orientation="vertical"
             android:background="@drawable/splash_button">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Food Title"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="10dp"
-                android:fontFamily="@font/poppins_semibold"
-                android:textColor="@color/green"
-                />
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Food Title"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textColor="@color/green" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:padding="10dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/green"
+                        android:text="EDIT"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppins_semibold"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"

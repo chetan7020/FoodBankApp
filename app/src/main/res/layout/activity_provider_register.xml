@@ -18,7 +18,7 @@
             android:layout_height="150dp"
             android:src="@drawable/login_img"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"/>
+            android:layout_marginTop="20dp"/>
 
 
 
@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:text="Welcome to"
                 android:gravity="center"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="30dp"
                 android:fontFamily="@font/poppins_semibold"
                 android:textSize="20dp"
                 android:textColor="@color/black"/>
@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:text="Feed the Need"
                 android:gravity="center"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginLeft="5dp"
                 android:fontFamily="@font/poppins_semibold"
                 android:textSize="20dp"
@@ -72,7 +72,7 @@
                 android:id="@+id/text_input_layout1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="20dp">
@@ -86,6 +86,30 @@
                     android:drawablePadding="10dp"
                     android:fontFamily="@font/poppins_medium"
                     android:hint="Username"
+                    android:paddingTop="30dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="20dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_comapany_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/splash_button"
+                    android:drawableLeft="@drawable/ic_baseline_account_box_24"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:hint="Company Name"
                     android:paddingTop="30dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
