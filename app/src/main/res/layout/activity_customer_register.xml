@@ -32,7 +32,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="30dp"
                     android:fontFamily="@font/poppins_semibold"
                     android:gravity="center"
                     android:text="Welcome to"
@@ -43,7 +43,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="30dp"
                     android:fontFamily="@font/poppins_semibold"
                     android:gravity="center"
                     android:text="Feed the Need"
@@ -74,9 +74,10 @@
                     android:id="@+id/text_input_layout4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="20dp">
+                    android:layout_marginBottom="10dp">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_name"
@@ -100,7 +101,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="20dp">
+                    android:layout_marginBottom="10dp">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_username"
@@ -123,8 +124,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginBottom="25dp">
+                    android:layout_marginRight="20dp">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_pass"
@@ -148,6 +148,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginBottom="25dp">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -185,7 +186,7 @@
                     android:id="@+id/llAbove"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="15dp"
                     android:gravity="center"
                     android:orientation="horizontal">
 
@@ -223,6 +224,7 @@
             android:layout_below="@+id/llMain"
             android:layout_alignParentBottom="true"
             android:gravity="center"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
             <TextView
