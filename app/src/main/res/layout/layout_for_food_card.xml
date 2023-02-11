@@ -16,7 +16,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="15dp"
             android:background="@drawable/splash_button">
 
             <TextView
@@ -25,64 +24,70 @@
                 android:text="Food Title"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_margin="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
                 android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/green"
                 />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Expiry Time - "
                 android:fontFamily="@font/poppins_medium"
-                android:layout_margin="5dp"
+                android:textColor="@color/green"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Show time and date here"
                 android:fontFamily="@font/poppins_medium"
-                android:layout_margin="5dp"
                 />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Location of Pickup - "
                 android:fontFamily="@font/poppins_medium"
-                android:layout_margin="5dp"
+                android:textColor="@color/green"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Show location here"
                 android:fontFamily="@font/poppins_medium"
-                android:layout_margin="5dp"
                 />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="✅ Veg/NonVeg"
+                android:text="✅ Veg/NonVeg "
                 android:fontFamily="@font/poppins_medium"
-                android:layout_margin="5dp"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="✅ Cooked/Non-cooked"
                 android:fontFamily="@font/poppins_medium"
-                android:layout_margin="5dp"
                 />
             </LinearLayout>
 
