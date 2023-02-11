@@ -61,6 +61,10 @@
 
             <include layout="@layout/feedback_layout" />
 
+            <include layout="@layout/feedback_layout" />
+
+            <include layout="@layout/feedback_layout" />
+
         </LinearLayout>
 
 
