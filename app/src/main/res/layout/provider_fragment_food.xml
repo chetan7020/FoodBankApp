@@ -72,6 +72,7 @@
         android:layout_marginRight="30dp"
         android:layout_marginBottom="30dp"
         android:src="@drawable/plus"
+        android:backgroundTint="@color/white"
         app:maxImageSize="57dp"/>
 
 
