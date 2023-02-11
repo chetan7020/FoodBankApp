@@ -3,33 +3,92 @@ package com.codizcdp.foodbanksurplus;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.onesignal.OneSignal;
+import com.codizcdp.foodbanksurplus.customer.CustomerMainActivity;
+import com.codizcdp.foodbanksurplus.provider.ProviderMainActivity;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class SplashActivity extends AppCompatActivity {
-    private static final String ONESIGNAL_APP_ID = "b8ff450c-b28d-4555-8c85-5c56bd36efd9";
+    private FirebaseAuth auth;
+    private FirebaseFirestore firebaseFirestore;
+    boolean customer = false;
+    boolean provider = false;
+
+    private static final String TAG = "SplashActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
-        // Enable verbose OneSignal logging to debug issues if needed.
-        OneSignal.setLogLevel(OneSignal.LOG_LEVEL.VERBOSE, OneSignal.LOG_LEVEL.NONE);
 
-        // OneSignal Initialization
-        OneSignal.initWithContext(this);
-        OneSignal.setAppId(ONESIGNAL_APP_ID);
+        auth = FirebaseAuth.getInstance();
+        firebaseFirestore = FirebaseFirestore.getInstance();
 
-        // promptForPushNotifications will show the native Android notification permission prompt.
-        // We recommend removing the following code and instead using an In-App Message to prompt for notification permission (See step 7)
-        OneSignal.promptForPushNotifications();
+        FirebaseUser user = auth.getCurrentUser();
 
-        new Handler().postDelayed(new Runnable() {
-            public void run() {
-                startActivity(new Intent(SplashActivity.this, LoginActivity.class));
-                finish();
-            }
-        }, 1500);
+        if (user != null) {
+            Log.d(TAG, "onCreate: User Found");
+            String email = user.getEmail();
+
+            Log.d(TAG, "onCreate: " + email);
+            firebaseFirestore.collection("Customer")
+                    .document(email)
+                    .get()
+                    .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                        @Override
+                        public void onSuccess(DocumentSnapshot documentSnapshot) {
+                            if (documentSnapshot.exists()) {
+                                new Handler().postDelayed(new Runnable() {
+                                    public void run() {
+
+                                        startActivity(new Intent(SplashActivity.this, CustomerMainActivity.class));
+                                        finish();
+                                    }
+                                }, 1000);
+                            }
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            customer = false;
+                        }
+                    });
+
+            firebaseFirestore.collection("Provider").document(email).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                @Override
+                public void onSuccess(DocumentSnapshot documentSnapshot) {
+                    if (documentSnapshot.exists()) {
+                        new Handler().postDelayed(new Runnable() {
+                            public void run() {
+
+                                startActivity(new Intent(SplashActivity.this, ProviderMainActivity.class));
+                                finish();
+                            }
+                        }, 1000);
+                    }
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Log.d(TAG, "onFailure: " + e.getMessage());
+                }
+            });
+        } else {
+            new Handler().postDelayed(new Runnable() {
+                public void run() {
+                    startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+                    finish();
+                }
+            }, 1000);
+        }
     }
 }

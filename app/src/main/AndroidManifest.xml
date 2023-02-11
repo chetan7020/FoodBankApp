@@ -15,28 +15,27 @@
         android:theme="@style/Theme.FoodBankSurplus"
         tools:targetApi="31">
         <activity
-            android:name=".customer.CustomerMainActivity"
-            android:exported="true"
-            android:label="@string/title_activity_customer_main">
-
+            android:name=".ProviderRegister"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        </activity>
+        <activity
+            android:name=".customer.CustomerMainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_customer_main">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
         </activity>
         <activity
             android:name=".CustomerRegisterActivity"
-            android:exported="true">
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".LoginActivity"
             android:exported="false"
@@ -44,15 +43,17 @@
         <activity
             android:name=".SplashActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".provider.ProviderMainActivity"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/title_activity_provider_main"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
-
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
