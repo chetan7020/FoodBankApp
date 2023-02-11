@@ -48,6 +48,7 @@
 <!--        android:textColor="@color/black"/>-->
 
     <LinearLayout
+        android:id="@+id/secondLinerLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -79,6 +80,8 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/text_input_layout2"
             android:layout_width="match_parent"
@@ -95,7 +98,7 @@
                 android:drawableLeft="@drawable/food_svg2"
                 android:drawablePadding="10dp"
                 android:fontFamily="@font/poppins_medium"
-                android:hint="Password"
+                android:hint="Type of food"
                 android:paddingTop="30dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
@@ -142,6 +145,49 @@
 <!--            android:textSize="17dp"-->
 <!--            android:fontFamily="@font/poppins_semibold"-->
 <!--            android:backgroundTint="@color/green"/>-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/secondLinerLayout">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etDatePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:layout_weight="8">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_pass2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/splash_button"
+                android:drawableLeft="@drawable/food_svg2"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:hint="Type of food"
+                android:paddingTop="30dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="20dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Select Date"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:padding="15dp"-->
+<!--            android:textSize="17dp"-->
+<!--            android:fontFamily="@font/poppins_semibold"-->
+<!--            android:backgroundTint="@color/green"/>-->
+
 
     </LinearLayout>
 

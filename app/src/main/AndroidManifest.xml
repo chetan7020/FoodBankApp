@@ -13,21 +13,21 @@
         android:theme="@style/Theme.FoodBankSurplus"
         tools:targetApi="31">
         <activity
-            android:name=".ProviderRegister"
-            android:exported="true" >
+            android:name=".ProviderLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"></activity>
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".LoginActivity"
-            android:exported="false"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
-        <activity
-            android:name=".SplashActivity"
-            android:exported="true" />
         <activity
             android:name=".provider.ProviderMainActivity"
             android:exported="true"
