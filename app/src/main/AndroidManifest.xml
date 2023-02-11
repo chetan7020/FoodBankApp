@@ -14,9 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodBankSurplus"
         tools:targetApi="31">
-        <activity
-            android:name=".ProviderLoginActivity"
-            android:exported="false" />
+
         <activity
             android:name=".LoginActivity"
             android:exported="false"
