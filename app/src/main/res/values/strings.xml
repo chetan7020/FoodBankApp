@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">Feed The Need</string>
+    <string-array name="spinner_array_for_category">
+        <item>Veg</item>
+        <item>Non-Veg</item>
+    </string-array>
     <string-array name="user_array">
         <item>Customer</item>
         <item>Provider</item>
