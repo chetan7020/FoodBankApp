@@ -68,25 +68,6 @@
             android:minLines="4"
             android:textSize="18dp" />
 
-<!--            <com.google.android.material.textfield.TextInputLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:background="@drawable/splash_button"-->
-<!--                android:drawableLeft="@drawable/food_svg1"-->
-<!--                android:drawablePadding="20dp"-->
-<!--                android:layout_marginTop="30dp"-->
-<!--                android:padding="20dp">-->
-
-<!--                <com.google.android.material.textfield.TextInputEditText-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:fontFamily="@font/poppins_medium"-->
-<!--                    android:hint="Enter Your Notice Description!"-->
-<!--                    android:inputType="textMultiLine"-->
-<!--                    android:minLines="4"-->
-<!--                    android:textColorHint="@color/green"-->
-<!--                    android:textSize="18dp" />-->
-<!--            </com.google.android.material.textfield.TextInputLayout>-->
         </LinearLayout>
 
     <Button
