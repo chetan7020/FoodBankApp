@@ -1,5 +1,6 @@
 package com.codizcdp.foodbanksurplus.provider.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.codizcdp.foodbanksurplus.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class ProviderFoodFragment extends Fragment {
 
@@ -22,12 +24,16 @@ public class ProviderFoodFragment extends Fragment {
     }
 
     private void initialize() {
-//        Spinner spinner = view.findViewById(R.id.spinnerForType1);
-//
-//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,
-//                getResources().getStringArray(R.array.spinner_array_for_category));
-//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        spinner.setAdapter(adapter);
+
+        FloatingActionButton plusButton;
+        plusButton = view.findViewById(R.id.addFoodFloatingActionBtn);
+
+        plusButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Chetan, add the logic to load/replace the new fragment of adding new food
+            }
+        });
 
     }
 
