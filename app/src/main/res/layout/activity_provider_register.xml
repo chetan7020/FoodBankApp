@@ -1,63 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProviderRegister">
 
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:src="@drawable/login_img" />
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:fontFamily="@font/poppins_semibold"
-                android:gravity="center"
-                android:text="Welcome to"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="50dp"
-                android:fontFamily="@font/poppins_semibold"
-                android:gravity="center"
-                android:text="Feed the Need"
-                android:textColor="@color/green"
-                android:textSize="20dp" />
-
-
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:fontFamily="@font/poppins_medium"
-            android:gravity="center"
-            android:text="Provider SignUp"
-            android:textSize="16dp" />
+        android:layout_height="wrap_content">
 
 
         <LinearLayout
@@ -66,208 +17,259 @@
             android:orientation="vertical">
 
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/text_input_layout1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="20dp">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/login_img" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/splash_button"
-                    android:drawableLeft="@drawable/ic_baseline_account_box_24"
-                    android:drawablePadding="10dp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:hint="Name"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="30dp"
-                    android:paddingRight="20dp"
-                    android:paddingBottom="20dp" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/text_input_layout4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="20dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etFoodCompanyName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/splash_button"
-                    android:drawableLeft="@drawable/ic_baseline_account_box_24"
-                    android:drawablePadding="10dp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:hint="Food Store Name"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="30dp"
-                    android:paddingRight="20dp"
-                    android:paddingBottom="20dp" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/text_input_layout5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="20dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etPhoneNumber"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/splash_button"
-                    android:drawableLeft="@drawable/ic_baseline_account_box_24"
-                    android:drawablePadding="10dp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:hint="Phone Number"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="30dp"
-                    android:paddingRight="20dp"
-                    android:paddingBottom="20dp" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="20dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etGmail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/splash_button"
-                    android:drawableLeft="@drawable/ic_baseline_account_box_24"
-                    android:drawablePadding="10dp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:hint="Gmail"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="30dp"
-                    android:paddingRight="20dp"
-                    android:paddingBottom="20dp" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/text_input_layout2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="25dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etPass"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/splash_button"
-                    android:drawableLeft="@drawable/ic_baseline_assignment_turned_in_24"
-                    android:drawablePadding="10dp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:hint="Password"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="30dp"
-                    android:paddingRight="20dp"
-                    android:paddingBottom="20dp" />
-
-            </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
                 android:orientation="horizontal">
-
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_medium"
-                    android:padding="10dp"
-                    android:text="Select your Id Proof"
-                    android:textColor="@color/green"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center"
+                    android:text="Welcome to"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
 
-                <ImageButton
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center"
+                    android:text="Feed the Need"
+                    android:textColor="@color/green"
+                    android:textSize="20dp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:text="Provider SignUp"
+                android:textSize="16dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/splash_button"
+                        android:drawableLeft="@drawable/ic_baseline_account_box_24"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:hint="Name"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="30dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="20dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_layout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etFoodCompanyName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/splash_button"
+                        android:drawableLeft="@drawable/ic_baseline_account_box_24"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:hint="Food Store Name"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="30dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="20dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_layout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPhoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/splash_button"
+                        android:drawableLeft="@drawable/ic_baseline_account_box_24"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:hint="Phone Number"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="30dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="20dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etGmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/splash_button"
+                        android:drawableLeft="@drawable/ic_baseline_account_box_24"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:hint="Gmail"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="30dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="20dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="15dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/splash_button"
+                        android:drawableLeft="@drawable/ic_baseline_assignment_turned_in_24"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:hint="Password"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="30dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="20dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:padding="10dp"
+                        android:text="Select your Id Proof"
+                        android:textColor="@color/green"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:backgroundTint="@color/green"
+                        android:src="@drawable/baseline_add_24" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnSignUp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="40dp"
                     android:backgroundTint="@color/green"
-                    android:src="@drawable/baseline_add_24" />
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="15dp"
+                    android:text="Sign Up"
+                    android:textColor="@color/white"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center_horizontal"
+                    android:text="Already have an account?"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="5dp"
+                    android:text="Login"
+                    android:textAlignment="center"
+                    android:textColor="@color/green" />
 
 
             </LinearLayout>
 
 
-            <Button
-                android:id="@+id/btnSignUp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="40dp"
-                android:backgroundTint="@color/green"
-                android:fontFamily="@font/poppins_semibold"
-                android:padding="15dp"
-                android:text="Sign Up"
-                android:textColor="@color/white"
-                android:textSize="17dp" />
-
         </LinearLayout>
 
 
-    </LinearLayout>
+    </RelativeLayout>
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_semibold"
-            android:gravity="center_horizontal"
-            android:text="Already have an account?"
-            android:textAlignment="center" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/poppins_semibold"
-            android:gravity="center_horizontal"
-            android:paddingLeft="5dp"
-            android:text="Login"
-            android:textAlignment="center"
-            android:textColor="@color/green" />
-
-
-    </LinearLayout>
-
-
-</RelativeLayout>
+</ScrollView>
