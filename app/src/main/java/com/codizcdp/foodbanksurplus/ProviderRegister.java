@@ -1,8 +1,5 @@
 package com.codizcdp.foodbanksurplus;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,7 +7,11 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.codizcdp.foodbanksurplus.provider.ProviderMainActivity;
+import com.codizcdp.foodbanksurplus.provider.Verhoeff;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -24,12 +25,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ProviderRegister extends AppCompatActivity {
-    private TextInputEditText etName, etFoodCompanyName, etPhoneNumber, etGmail, etPass;
+    private TextInputEditText etName, etFoodCompanyName, etPhoneNumber, etGmail, etPass, etAadharNumber;
     private Button btnSignUp;
     private static final String TAG = "ProviderRegister";
     private TextView tvLogin;
     private FirebaseAuth firebaseAuth;
     private FirebaseFirestore firebaseFirestore;
+    private boolean flag = false;
 
     private void initialize() {
         etName = findViewById(R.id.etName);
@@ -37,6 +39,8 @@ public class ProviderRegister extends AppCompatActivity {
         etPhoneNumber = findViewById(R.id.etPhoneNumber);
         etGmail = findViewById(R.id.etGmail);
         etPass = findViewById(R.id.etPass);
+        etAadharNumber = findViewById(R.id.etAadhar);
+
         tvLogin = findViewById(R.id.tvLoginNow);
 
         btnSignUp = findViewById(R.id.btnSignUp);
@@ -47,7 +51,7 @@ public class ProviderRegister extends AppCompatActivity {
         tvLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
             }
         });
     }
@@ -64,7 +68,7 @@ public class ProviderRegister extends AppCompatActivity {
     }
 
     private void getFiledData() {
-        String name, companyName, phoneNumber, gmail, pass;
+        String name, companyName, phoneNumber, gmail, pass, aadhar;
 
         name = etName.getText().toString().trim();
         companyName = etFoodCompanyName.getText().toString().trim();
@@ -72,7 +76,9 @@ public class ProviderRegister extends AppCompatActivity {
         gmail = etGmail.getText().toString().trim();
         pass = etPass.getText().toString().trim();
 
-        if (name.equals("") || companyName.equals("") | phoneNumber.equals("") | gmail.equals("") | pass.equals("")) {
+        aadhar = etAadharNumber.getText().toString().trim();
+
+        if (name.equals("") || companyName.equals("") || phoneNumber.equals("") || gmail.equals("") || pass.equals("") || aadhar.equals("")) {
 
             if (name.equals("")) {
                 etName.setError("Required");
@@ -94,6 +100,10 @@ public class ProviderRegister extends AppCompatActivity {
                 etPass.setError("Required");
             }
 
+            if (aadhar.equals("")) {
+                etAadharNumber.setError("Required");
+            }
+
 
         } else {
             etName.setError(null);
@@ -101,7 +111,15 @@ public class ProviderRegister extends AppCompatActivity {
             etGmail.setError(null);
             etPhoneNumber.setError(null);
             etPass.setError(null);
-            signUpWithEmailAndPassword(gmail, pass, name, companyName, phoneNumber);
+            etAadharNumber.setError(null);
+
+            flag = Verhoeff.ValidateVerhoeff(aadhar);
+
+            if (flag) {
+                signUpWithEmailAndPassword(gmail, pass, name, companyName, phoneNumber, aadhar);
+            }else{
+                Toast.makeText(this, "Invalid Aadhar Number", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 
@@ -113,7 +131,7 @@ public class ProviderRegister extends AppCompatActivity {
     }
 
 
-    private void signUpWithEmailAndPassword(String email, String password, String name, String companyName, String phoneNumber) {
+    private void signUpWithEmailAndPassword(String email, String password, String name, String companyName, String phoneNumber, String aadhar) {
         firebaseAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -125,8 +143,9 @@ public class ProviderRegister extends AppCompatActivity {
                             data.put("id", id);
                             data.put("name", name);
                             data.put("email", email);
-                            data.put("companyName", email);
-                            data.put("phoneNumber", email);
+                            data.put("companyName", companyName);
+                            data.put("phoneNumber", phoneNumber);
+                            data.put("aadhar", aadhar);
 
                             firebaseFirestore
                                     .collection("Provider")
@@ -150,7 +169,6 @@ public class ProviderRegister extends AppCompatActivity {
                     }
                 });
     }
-
 
 
     @Override
