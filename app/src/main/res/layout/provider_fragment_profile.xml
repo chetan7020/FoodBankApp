@@ -3,13 +3,206 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".provider.ui.ProviderProfileFragment">
 
+
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Profile"
-        android:textSize="30sp" />
+        android:text="User Profile"
+        android:padding="20dp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textColor="@color/green"
+        android:textSize="25dp"
+        android:fontFamily="@font/poppins_semibold"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/light_green"
+        android:layout_margin="20dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="15dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Register Id :"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/poppins_semibold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1234567890"
+                    android:textSize="19dp"
+                    android:textColor="@color/green"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Username :"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/poppins_semibold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yash Sandip Aher"
+                    android:textSize="19dp"
+                    android:textColor="@color/green"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="15dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Restaurant Name :"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/poppins_semibold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chetan patil"
+                    android:textSize="19dp"
+                    android:textColor="@color/green"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="20dp"
+       android:orientation="horizontal">
+
+       <androidx.cardview.widget.CardView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginRight="10dp"
+           android:backgroundTint="@color/light_green"
+           android:layout_weight="1">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="10dp"
+               android:orientation="vertical">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Number of Food Donate"
+                   android:gravity="center_horizontal"
+                   android:textSize="20dp"
+                   android:fontFamily="@font/poppins_semibold"
+                   android:textColor="@color/green"/>
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="500"
+                   android:gravity="center_horizontal"
+                   android:textSize="20dp"
+                   android:fontFamily="@font/poppins_semibold"/>
+
+           </LinearLayout>
+
+
+
+       </androidx.cardview.widget.CardView>
+
+
+       <androidx.cardview.widget.CardView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="10dp"
+           android:backgroundTint="@color/light_green"
+           android:layout_weight="1">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="10dp"
+               android:orientation="vertical">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Number of Food Donate"
+                   android:gravity="center_horizontal"
+                   android:textSize="20dp"
+                   android:fontFamily="@font/poppins_semibold"
+                   android:textColor="@color/green"/>
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="500"
+                   android:gravity="center_horizontal"
+                   android:textSize="20dp"
+                   android:fontFamily="@font/poppins_semibold"/>
+
+           </LinearLayout>
+
+       </androidx.cardview.widget.CardView>
+
+
+
+   </LinearLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/green"
+        android:padding="15dp"
+        android:text="Update Profile"
+        android:textSize="17dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/white"/>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/helping_people"/>
+
+
+
+
+
 
 </LinearLayout>
