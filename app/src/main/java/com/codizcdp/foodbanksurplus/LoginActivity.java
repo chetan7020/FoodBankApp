@@ -15,8 +15,6 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class LoginActivity extends AppCompatActivity {
 
-    //added
-
     TextInputLayout textInputLayout;
     AutoCompleteTextView autoCompleteTextView;
     String [] items = {"User","Admin","Provider"};
