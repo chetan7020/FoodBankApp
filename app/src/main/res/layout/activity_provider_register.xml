@@ -109,7 +109,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/splash_button"
-                        android:drawableLeft="@drawable/ic_baseline_account_box_24"
+                        android:drawableLeft="@drawable/baseline_add_business_24"
                         android:drawablePadding="10dp"
                         android:fontFamily="@font/poppins_medium"
                         android:hint="Food Store Name"
@@ -138,6 +138,7 @@
                         android:fontFamily="@font/poppins_medium"
                         android:hint="Phone Number"
                         android:paddingLeft="20dp"
+                        android:inputType="phone"
                         android:paddingTop="30dp"
                         android:paddingRight="20dp"
                         android:paddingBottom="20dp" />
@@ -156,10 +157,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/splash_button"
-                        android:drawableLeft="@drawable/ic_baseline_account_box_24"
+                        android:drawableLeft="@drawable/baseline_email_24"
                         android:drawablePadding="10dp"
                         android:fontFamily="@font/poppins_medium"
                         android:hint="Gmail"
+                        android:inputType="textEmailAddress"
                         android:paddingLeft="20dp"
                         android:paddingTop="30dp"
                         android:paddingRight="20dp"
@@ -173,7 +175,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="15dp">
+                    android:layout_marginBottom="10dp">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etPass"
@@ -191,34 +193,31 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <LinearLayout
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:orientation="horizontal">
+                    android:layout_marginBottom="15dp">
 
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAadhar"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/splash_button"
+                        android:drawableLeft="@drawable/baseline_arrow_circle_right_24"
+                        android:drawablePadding="10dp"
                         android:fontFamily="@font/poppins_medium"
-                        android:padding="10dp"
-                        android:text="Select your Id Proof"
-                        android:textColor="@color/green"
-                        android:textSize="18dp"
-                        android:textStyle="bold" />
+                        android:hint="Enter Aadhar Number"
+                        android:inputType="number"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="30dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="20dp" />
 
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:backgroundTint="@color/green"
-                        android:src="@drawable/baseline_add_24" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-                </LinearLayout>
+
 
                 <Button
                     android:id="@+id/btnSignUp"
