@@ -106,7 +106,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/splash_button"
-                    android:drawableLeft="@drawable/ic_baseline_account_box_24"
+                    android:drawableLeft="@drawable/baseline_add_business_24"
                     android:drawablePadding="10dp"
                     android:fontFamily="@font/poppins_medium"
                     android:hint="Company Name"
