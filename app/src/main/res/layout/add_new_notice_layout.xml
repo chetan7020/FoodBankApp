@@ -1,34 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <LinearLayout
-        android:id="@+id/topLinerLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center_horizontal"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_semibold"
-            android:gravity="center"
-            android:text="Create a New Notice For"
-            android:textColor="@color/black"
-            android:textSize="20dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/topLinerLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:gravity="center"
-            android:text="All the Needy Right There"
-            android:textColor="@color/green"
-            android:textSize="20dp" />
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:text="Create a New Notice For"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:text="All the Needy Right There"
+                android:textColor="@color/green"
+                android:textSize="20dp" />
 
         </LinearLayout>
 
@@ -36,47 +42,54 @@
             android:id="@+id/secondNoticeLinerLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_below="@id/topLinerLayout"
+            android:orientation="vertical"
             android:padding="20dp">
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/splash_button"
-            android:drawableLeft="@drawable/food_svg1"
-            android:drawablePadding="20dp"
-            android:fontFamily="@font/poppins_medium"
-            android:hint="Give Your Notice a Title!"
-            android:inputType="text"
-            android:padding="20dp"
-            android:textColorHint="@color/green"
-            android:textSize="18dp" />
+            <EditText
+                android:id="@+id/etTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/splash_button"
+                android:drawableLeft="@drawable/food_svg1"
+                android:drawablePadding="20dp"
+                android:fontFamily="@font/poppins_medium"
+                android:hint="Give Your Notice a Title!"
+                android:inputType="text"
+                android:padding="20dp"
+                android:textColorHint="@color/green"
+                android:textSize="18dp" />
 
-        <EditText
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/splash_button"
-            android:drawableLeft="@drawable/food_svg2"
-            android:drawablePadding="20dp"
-            android:fontFamily="@font/poppins_medium"
-            android:hint="Enter Notice Description!"
-            android:padding="20dp"
-            android:textColorHint="@color/green"
-            android:inputType="textMultiLine"
-            android:minLines="4"
-            android:textSize="18dp" />
+            <EditText
+                android:id="@+id/etDisc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/splash_button"
+                android:drawableLeft="@drawable/food_svg2"
+                android:drawablePadding="20dp"
+                android:fontFamily="@font/poppins_medium"
+                android:hint="Enter Notice Description!"
+                android:inputType="textMultiLine"
+                android:minLines="4"
+                android:padding="20dp"
+                android:textColorHint="@color/green"
+                android:textSize="18dp" />
 
         </LinearLayout>
 
-    <Button
-        android:layout_below="@id/secondNoticeLinerLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/green"
-        android:layout_centerHorizontal="true"
-        android:text="Confirm"
-        android:textColor="@color/white" />
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/secondNoticeLinerLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/green"
+            android:text="Add"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
 
-</RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -51,19 +51,48 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <include layout="@layout/layout_for_food_card" />
+            <LinearLayout
+                android:id="@+id/topLinerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
 
-            <include layout="@layout/layout_for_food_card" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center"
+                    android:text="Your All"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
 
-            <include layout="@layout/layout_for_food_card" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center"
+                    android:text="Foods"
+                    android:textColor="@color/green"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
 
 
+            <LinearLayout
+                android:id="@+id/llData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
         </LinearLayout>
+
 
     </ScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/plus_button"
+        android:id="@+id/fabAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -71,9 +100,8 @@
         android:layout_gravity="bottom|end"
         android:layout_marginRight="30dp"
         android:layout_marginBottom="30dp"
-        android:src="@drawable/plus"
         android:backgroundTint="@color/white"
-        app:maxImageSize="57dp"/>
-
+        android:src="@drawable/plus"
+        app:maxImageSize="57dp" />
 
 </RelativeLayout>

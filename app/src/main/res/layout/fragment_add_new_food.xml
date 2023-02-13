@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".provider.ProviderAddNewFoodFragment">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:id="@+id/topLinerLayout"
@@ -40,9 +38,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/topLinerLayout"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:orientation="vertical">
-
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/text_input_layout1"
@@ -53,7 +50,7 @@
             android:layout_marginBottom="20dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_username"
+                android:id="@+id/etDishName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/splash_button"
@@ -68,108 +65,88 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/dateTimeLinearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/secondLinerLayout"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:orientation="horizontal">
-
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/etDatePicker"
+            android:id="@+id/text_input_layout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="2dp"
-            android:layout_marginBottom="25dp"
-            android:layout_weight="1">
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_datepicker"
+                android:id="@+id/etExpiryTime"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/splash_button"
-                android:drawableLeft="@drawable/datesvg"
+                android:drawableLeft="@drawable/food_svg1"
                 android:drawablePadding="10dp"
                 android:fontFamily="@font/poppins_medium"
-                android:hint="Select Date"
+                android:hint="Expiry Time (hr)"
                 android:paddingLeft="20dp"
                 android:paddingTop="30dp"
                 android:paddingRight="20dp"
                 android:paddingBottom="20dp" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/etTimePicker"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="2dp"
-            android:layout_marginBottom="25dp"
-            android:layout_weight="1">
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_timepicker"
+                android:id="@+id/etCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/splash_button"
-                android:drawableLeft="@drawable/timesvg"
+                android:drawableLeft="@drawable/food_svg1"
                 android:drawablePadding="10dp"
                 android:fontFamily="@font/poppins_medium"
-                android:hint="Select Time"
+                android:hint="Category (Cooked/Uncooked)"
                 android:paddingLeft="20dp"
                 android:paddingTop="30dp"
                 android:paddingRight="20dp"
                 android:paddingBottom="20dp" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/locationLinerLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/dateTimeLinearLayout"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:orientation="horizontal">
-
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/etLocationOfFood"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="2dp"
-            android:layout_marginBottom="25dp"
-            android:layout_weight="1">
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextLocationOfFood"
+                android:id="@+id/etType"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/splash_button"
-                android:drawableLeft="@drawable/locationsvg"
+                android:drawableLeft="@drawable/food_svg1"
                 android:drawablePadding="10dp"
                 android:fontFamily="@font/poppins_medium"
-                android:hint="Select Location for Pickup"
+                android:hint="Type (Veg/Non-Veg)"
                 android:paddingLeft="20dp"
                 android:paddingTop="30dp"
                 android:paddingRight="20dp"
                 android:paddingBottom="20dp" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:backgroundTint="@color/green"
+            android:text="Add"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/categoryLinearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/locationLinerLayout"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:orientation="horizontal">
-
-    </LinearLayout>
 
 </RelativeLayout>

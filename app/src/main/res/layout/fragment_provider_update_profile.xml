@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".provider.ProviderUpdateProfileFragment">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,49 +12,48 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Update Profile"
-            android:padding="20dp"
+            android:fontFamily="@font/poppins_semibold"
             android:gravity="center_horizontal"
-            android:textStyle="bold"
+            android:padding="20dp"
+            android:text="Update Profile"
             android:textColor="@color/green"
             android:textSize="25dp"
-            android:fontFamily="@font/poppins_semibold"/>
-
-
+            android:textStyle="bold" />
 
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
             android:layout_marginTop="10dp"
-            android:layout_height="wrap_content">
+            android:layout_marginRight="20dp">
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="vertical"
                 android:paddingLeft="20dp"
                 android:paddingTop="15dp"
-                android:paddingBottom="15dp"
                 android:paddingRight="15dp"
-                android:orientation="vertical">
+                android:paddingBottom="15dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Username"
-                    android:textSize="18dp"
-                    android:fontFamily="@font/poppins_semibold"/>
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Name"
+                    android:textSize="18dp" />
 
                 <EditText
+                    android:id="@+id/etName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@color/light_green"
-                    android:padding="10dp"
-                    android:text="Yash Aher"
                     android:fontFamily="@font/poppins_medium"
-                    android:textColor="@color/green"/>
+                    android:padding="10dp"
+                    android:textColor="@color/green" />
 
             </LinearLayout>
 
@@ -64,37 +61,75 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
             android:layout_marginTop="15dp"
-            android:layout_height="wrap_content">
-
+            android:layout_marginRight="20dp">
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="vertical"
                 android:paddingLeft="20dp"
                 android:paddingTop="15dp"
-                android:paddingBottom="15dp"
                 android:paddingRight="15dp"
-                android:orientation="vertical">
+                android:paddingBottom="15dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
                     android:text="Restaurant Name"
-                    android:textSize="18dp"
-                    android:fontFamily="@font/poppins_semibold"/>
+                    android:textSize="18dp" />
 
                 <EditText
+                    android:id="@+id/etCompanyName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@color/light_green"
-                    android:padding="10dp"
-                    android:text="apple bazar"
                     android:fontFamily="@font/poppins_medium"
-                    android:textColor="@color/green"/>
+                    android:padding="10dp"
+                    android:textColor="@color/green" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingTop="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Phone Number"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/etPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/light_green"
+                    android:fontFamily="@font/poppins_medium"
+                    android:padding="10dp"
+                    android:textColor="@color/green" />
 
             </LinearLayout>
 
@@ -102,17 +137,19 @@
 
 
         <Button
+            android:id="@+id/btnUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
             android:background="@color/green"
+            android:backgroundTint="@color/green"
+            android:fontFamily="@font/poppins_semibold"
             android:text="Update"
             android:textColor="@color/white"
-            android:fontFamily="@font/poppins_semibold"
-            android:textSize="18dp"/>
+            android:textSize="18dp" />
 
 
     </LinearLayout>

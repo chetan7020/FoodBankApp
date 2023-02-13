@@ -15,7 +15,7 @@
             android:fontFamily="@font/poppins_semibold"
             android:gravity="center_horizontal"
             android:padding="20dp"
-            android:text="Update Food Item"
+            android:text="Update Notice"
             android:textColor="@color/green"
             android:textSize="25dp"
             android:textStyle="bold" />
@@ -42,11 +42,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_semibold"
-                    android:text="Food Item Name"
+                    android:text="Title"
                     android:textSize="18dp" />
 
                 <EditText
-                    android:id="@+id/tvFoodTitle"
+                    android:id="@+id/etTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -66,7 +66,6 @@
             android:layout_marginTop="15dp"
             android:layout_marginRight="20dp">
 
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -80,94 +79,24 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_semibold"
-                    android:text="Expiry Time"
+                    android:text="Description"
                     android:textSize="18dp" />
 
-                <EditText
-                    android:id="@+id/tvExpiryTime"
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@color/light_green"
-                    android:fontFamily="@font/poppins_medium"
-                    android:padding="10dp"
-                    android:textColor="@color/green" />
+                    android:layout_height="wrap_content">
 
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="20dp">
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingLeft="20dp"
-                android:paddingTop="15dp"
-                android:paddingRight="15dp"
-                android:paddingBottom="15dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:text="Cooked / Non-Cooked"
-                    android:textSize="18dp" />
-
-                <EditText
-                    android:id="@+id/tvCategory"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@color/light_green"
-                    android:fontFamily="@font/poppins_medium"
-                    android:padding="10dp"
-                    android:textColor="@color/green" />
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="20dp">
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingLeft="20dp"
-                android:paddingTop="15dp"
-                android:paddingRight="15dp"
-                android:paddingBottom="15dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:text="Veg / Non-veg"
-                    android:textSize="18dp" />
-
-                <EditText
-                    android:id="@+id/tvType"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@color/light_green"
-                    android:fontFamily="@font/poppins_medium"
-                    android:padding="10dp"
-                    android:textColor="@color/green" />
+                    <EditText
+                        android:id="@+id/etDisc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/light_green"
+                        android:fontFamily="@font/poppins_medium"
+                        android:padding="10dp"
+                        android:textColor="@color/green" />
+                </LinearLayout>
 
             </LinearLayout>
 

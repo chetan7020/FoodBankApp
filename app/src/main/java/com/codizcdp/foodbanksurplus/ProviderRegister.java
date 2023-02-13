@@ -25,7 +25,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ProviderRegister extends AppCompatActivity {
-    private TextInputEditText etName, etFoodCompanyName, etPhoneNumber, etGmail, etPass, etAadharNumber;
+    private TextInputEditText etName, etFoodCompanyName, etPhoneNumber, etGmail, etPass, etAadharNumber, etLocation;
     private Button btnSignUp;
     private static final String TAG = "ProviderRegister";
     private TextView tvLogin;
@@ -40,6 +40,7 @@ public class ProviderRegister extends AppCompatActivity {
         etGmail = findViewById(R.id.etGmail);
         etPass = findViewById(R.id.etPass);
         etAadharNumber = findViewById(R.id.etAadhar);
+        etLocation = findViewById(R.id.etLocation);
 
         tvLogin = findViewById(R.id.tvLoginNow);
 
@@ -68,17 +69,18 @@ public class ProviderRegister extends AppCompatActivity {
     }
 
     private void getFiledData() {
-        String name, companyName, phoneNumber, gmail, pass, aadhar;
+        String name, companyName, phoneNumber, gmail, pass, aadhar, location;
 
         name = etName.getText().toString().trim();
         companyName = etFoodCompanyName.getText().toString().trim();
         phoneNumber = etPhoneNumber.getText().toString().trim();
         gmail = etGmail.getText().toString().trim();
         pass = etPass.getText().toString().trim();
+        location = etLocation.getText().toString().trim();
 
         aadhar = etAadharNumber.getText().toString().trim();
 
-        if (name.equals("") || companyName.equals("") || phoneNumber.equals("") || gmail.equals("") || pass.equals("") || aadhar.equals("")) {
+        if (name.equals("") || companyName.equals("") || phoneNumber.equals("") || gmail.equals("") || pass.equals("") || aadhar.equals("")|| location.equals("")) {
 
             if (name.equals("")) {
                 etName.setError("Required");
@@ -104,6 +106,10 @@ public class ProviderRegister extends AppCompatActivity {
                 etAadharNumber.setError("Required");
             }
 
+            if (location.equals("")) {
+                etAadharNumber.setError("Required");
+            }
+
 
         } else {
             etName.setError(null);
@@ -112,17 +118,17 @@ public class ProviderRegister extends AppCompatActivity {
             etPhoneNumber.setError(null);
             etPass.setError(null);
             etAadharNumber.setError(null);
+            etLocation.setError(null);
 
             flag = Verhoeff.ValidateVerhoeff(aadhar);
 
             if (flag) {
-                signUpWithEmailAndPassword(gmail, pass, name, companyName, phoneNumber, aadhar);
+                signUpWithEmailAndPassword(gmail, pass, name, companyName, phoneNumber, aadhar, location);
             }else{
                 Toast.makeText(this, "Invalid Aadhar Number", Toast.LENGTH_SHORT).show();
             }
         }
     }
-
 
     public String createID() {
         String id = "";
@@ -130,8 +136,7 @@ public class ProviderRegister extends AppCompatActivity {
         return id;
     }
 
-
-    private void signUpWithEmailAndPassword(String email, String password, String name, String companyName, String phoneNumber, String aadhar) {
+    private void signUpWithEmailAndPassword(String email, String password, String name, String companyName, String phoneNumber, String aadhar, String location) {
         firebaseAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -146,6 +151,10 @@ public class ProviderRegister extends AppCompatActivity {
                             data.put("companyName", companyName);
                             data.put("phoneNumber", phoneNumber);
                             data.put("aadhar", aadhar);
+                            data.put("order", "0");
+                            data.put("location", location);
+                                data.put("lat", "null");
+                            data.put("lang", "null");
 
                             firebaseFirestore
                                     .collection("Provider")

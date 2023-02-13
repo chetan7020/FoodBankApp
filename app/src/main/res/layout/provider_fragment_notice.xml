@@ -83,23 +83,21 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/llData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-            <include layout="@layout/layout_for_all_notices" />
+            </LinearLayout>
 
-            <include layout="@layout/layout_for_all_notices" />
-
-            <include layout="@layout/layout_for_all_notices" />
-
-            <include layout="@layout/layout_for_all_notices" />
-
-            <include layout="@layout/layout_for_all_notices" />
 
         </LinearLayout>
 
     </ScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/plus_button"
+        android:id="@+id/fabAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"

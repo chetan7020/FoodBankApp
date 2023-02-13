@@ -133,6 +133,7 @@ public class CustomerRegisterActivity extends AppCompatActivity {
                             data.put("id", id);
                             data.put("name", name);
                             data.put("email", email);
+                            data.put("order", "0");
 
                             firebaseFirestore
                                     .collection("Customer")
