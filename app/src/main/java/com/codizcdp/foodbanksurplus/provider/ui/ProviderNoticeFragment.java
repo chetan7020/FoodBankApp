@@ -77,15 +77,15 @@ public class ProviderNoticeFragment extends Fragment {
                             String description = dc.getDocument().getData().get("description").toString();
                             switch (dc.getType()) {
                                 case ADDED:
-                                    Log.d(TAG, "onEvent: ADDED"+dc.getDocument().getData());
+                                    Log.d(TAG, "onEvent: ADDED" + dc.getDocument().getData());
                                     createCard(id, title, description);
                                     break;
                                 case MODIFIED:
-                                    Log.d(TAG, "onEvent: MODIFIED"+dc.getDocument().getData());
+                                    Log.d(TAG, "onEvent: MODIFIED" + dc.getDocument().getData());
                                     updateNotice(id, title, description);
                                     break;
                                 case REMOVED:
-                                    Log.d(TAG, "onEvent: REMOVED"+dc.getDocument().getData());
+                                    Log.d(TAG, "onEvent: REMOVED" + dc.getDocument().getData());
                                     for (int i = 0; i < llData.getChildCount(); i++) {
 
                                         TextView tvID = llData.getChildAt(i).findViewById(R.id.tvID);
@@ -137,7 +137,6 @@ public class ProviderNoticeFragment extends Fragment {
                 tvTitle.setText(title);
                 tvDisc.setText(description);
 
-                Toast.makeText(getActivity(), "Food Data Updated", Toast.LENGTH_SHORT).show();
             }
 
         }
@@ -198,7 +197,17 @@ public class ProviderNoticeFragment extends Fragment {
                         firebaseFirestore
                                 .collection(firebaseAuth.getCurrentUser().getEmail() + "_notice")
                                 .document(clicked_id)
-                                .update(data);
+                                .update(data).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void unused) {
+                                        Toast.makeText(getActivity(), "Notice Updated", Toast.LENGTH_SHORT).show();
+                                    }
+                                }).addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                                    }
+                                });
                         dialog.dismiss();
                     }
                 });
@@ -227,7 +236,7 @@ public class ProviderNoticeFragment extends Fragment {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                btnAdd.setEnabled(false);
                 String id, description, title;
 
                 id = createID();
@@ -247,6 +256,7 @@ public class ProviderNoticeFragment extends Fragment {
                             @Override
                             public void onSuccess(Void unused) {
                                 Toast.makeText(getActivity(), "Notice Data Added", Toast.LENGTH_SHORT).show();
+                                btnAdd.setEnabled(true);
                                 dialog.dismiss();
                             }
                         }).addOnFailureListener(new OnFailureListener() {

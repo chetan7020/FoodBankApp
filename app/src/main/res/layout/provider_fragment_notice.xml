@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     tools:context=".provider.ui.ProviderNoticeFragment">
 
     <RelativeLayout
         android:id="@+id/relLayout1"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_alignParentTop="true"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
@@ -69,17 +69,17 @@
                     android:gravity="center"
                     android:text="Your All"
                     android:textColor="@color/black"
-                    android:textSize="20dp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
                     android:fontFamily="@font/poppins_semibold"
                     android:gravity="center"
                     android:text="Notices"
                     android:textColor="@color/green"
-                    android:textSize="20dp" />
+                    android:textSize="24sp" />
 
             </LinearLayout>
 
@@ -100,13 +100,14 @@
         android:id="@+id/fabAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom|end"
-        android:layout_marginRight="30dp"
+        android:layout_marginEnd="30dp"
         android:layout_marginBottom="30dp"
         android:src="@drawable/addbtnsvg"
         app:backgroundTint="@color/white"
         app:maxImageSize="57dp" />
+
 
 </RelativeLayout>

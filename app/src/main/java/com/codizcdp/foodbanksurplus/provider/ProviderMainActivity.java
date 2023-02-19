@@ -1,6 +1,7 @@
 package com.codizcdp.foodbanksurplus.provider;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import com.codizcdp.foodbanksurplus.R;
 import com.codizcdp.foodbanksurplus.databinding.ActivityProviderMainBinding;
@@ -14,11 +15,14 @@ import androidx.navigation.ui.NavigationUI;
 
 public class ProviderMainActivity extends AppCompatActivity {
 
+    private static final String TAG = "ProviderMainActivity";
     private ActivityProviderMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Log.d(TAG, "onCreate: ProviderMainActivity");
 
         binding = ActivityProviderMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());

@@ -56,12 +56,7 @@ public class ProviderFoodFragment extends Fragment {
 
         displayFood();
 
-        fabAdd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setupDialog();
-            }
-        });
+        fabAdd.setOnClickListener(view -> setupDialog());
 
     }
 
@@ -114,7 +109,7 @@ public class ProviderFoodFragment extends Fragment {
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
-                        Toast.makeText(getActivity(), "Food Deleted Successfully", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "Food Data Deleted", Toast.LENGTH_SHORT).show();
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
@@ -141,16 +136,6 @@ public class ProviderFoodFragment extends Fragment {
                 tvCategory.setText(category);
                 tvType.setText(type);
 
-                Toast.makeText(getActivity(), "Food Data Updated", Toast.LENGTH_SHORT).show();
-//                Map<String, Object> data = new HashMap<>();
-//                data.put("dishName", dishName);
-//                data.put("expiryTime", expiryTime);
-//                data.put("category", category);
-//                data.put("type", type);
-//
-//                firebaseFirestore.collection(firebaseAuth.getCurrentUser().getEmail() + "_food")
-//                        .document(id)
-//                        .update(data);
             }
 
         }
@@ -223,7 +208,17 @@ public class ProviderFoodFragment extends Fragment {
                         firebaseFirestore
                                 .collection(firebaseAuth.getCurrentUser().getEmail() + "_food")
                                 .document(clicked_id)
-                                .update(data);
+                                .update(data).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void unused) {
+                                        Toast.makeText(getActivity(), "Food Data Updated", Toast.LENGTH_SHORT).show();
+                                    }
+                                }).addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                                    }
+                                });
                         dialog.dismiss();
                     }
                 });
@@ -255,6 +250,7 @@ public class ProviderFoodFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
+                btnAdd.setEnabled(false);
                 String id, dishName, expiryTime, category, type;
 
                 id = createID();
@@ -277,7 +273,8 @@ public class ProviderFoodFragment extends Fragment {
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
-                                Toast.makeText(getActivity(), "Food Data Added", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getActivity(), "Food Added", Toast.LENGTH_SHORT).show();
+                                btnAdd.setEnabled(true);
                                 dialog.dismiss();
                             }
                         }).addOnFailureListener(new OnFailureListener() {
@@ -302,6 +299,8 @@ public class ProviderFoodFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.provider_fragment_food, container, false);
+
+        Log.d(TAG, "onCreateView: ProviderFoodFragment");
 
         init();
 

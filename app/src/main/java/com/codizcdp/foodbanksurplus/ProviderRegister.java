@@ -80,7 +80,7 @@ public class ProviderRegister extends AppCompatActivity {
 
         aadhar = etAadharNumber.getText().toString().trim();
 
-        if (name.equals("") || companyName.equals("") || phoneNumber.equals("") || gmail.equals("") || pass.equals("") || aadhar.equals("")|| location.equals("")) {
+        if (name.equals("") || companyName.equals("") || phoneNumber.equals("") || gmail.equals("") || pass.equals("") || aadhar.equals("") || location.equals("")) {
 
             if (name.equals("")) {
                 etName.setError("Required");
@@ -124,7 +124,7 @@ public class ProviderRegister extends AppCompatActivity {
 
             if (flag) {
                 signUpWithEmailAndPassword(gmail, pass, name, companyName, phoneNumber, aadhar, location);
-            }else{
+            } else {
                 Toast.makeText(this, "Invalid Aadhar Number", Toast.LENGTH_SHORT).show();
             }
         }
@@ -152,9 +152,13 @@ public class ProviderRegister extends AppCompatActivity {
                             data.put("phoneNumber", phoneNumber);
                             data.put("aadhar", aadhar);
                             data.put("order", "0");
+                            data.put("isVerified", "false");
                             data.put("location", location);
-                                data.put("lat", "null");
+                            data.put("lat", "null");
                             data.put("lang", "null");
+                            data.put("available", "Available");
+                            data.put("timeFrom", "10:00AM");
+                            data.put("timeTo", "12:00PM");
 
                             firebaseFirestore
                                     .collection("Provider")

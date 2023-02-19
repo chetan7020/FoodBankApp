@@ -1,63 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".customer.ui.CustomerProviderFragment">
 
     <LinearLayout
-        android:id="@+id/linear_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <RelativeLayout
-            android:id="@+id/relLayout1"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/round_corner"
-            android:elevation="10dp"
-            android:paddingStart="15dp">
-
-            <ImageView
-                android:id="@+id/ivSearch"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="15dp"
-                android:src="@drawable/magnify" />
-
-            <AutoCompleteTextView
-                android:id="@+id/etSearch"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_centerVertical="true"
-                android:layout_toStartOf="@+id/ivSearch"
-                android:background="@null"
-                android:hint="Search Order Here"
-                android:imeOptions="actionSearch"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
-
-        </RelativeLayout>
 
         <LinearLayout
+            android:id="@+id/linear_layout"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_weight="3.5"
-            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
             android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/relLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:elevation="5dp"
+                android:background="@drawable/round_corner"
+                android:paddingStart="15dp">
+
+                <ImageView
+                    android:id="@+id/ivSearch"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/magnify" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/etSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/ivSearch"
+                    android:background="@null"
+                    android:hint="Search Order Here"
+                    android:imeOptions="actionSearch"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
 
 
             <ImageView
-                android:layout_width="30dp"
+                android:layout_width="50dp"
+                android:padding="10dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/filter2" />
@@ -66,35 +62,20 @@
         </LinearLayout>
 
 
-    </LinearLayout>
-
-
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/linear_layout">
-
-        <LinearLayout
-            android:id="@+id/llData"
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical">
+            android:layout_marginTop="10dp">
 
-            <include layout="@layout/customer_provider_layout" />
+            <LinearLayout
+                android:id="@+id/llData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="vertical">
 
-            <include layout="@layout/customer_provider_layout" />
+            </LinearLayout>
 
-            <include layout="@layout/customer_provider_layout" />
-
-            <include layout="@layout/customer_provider_layout" />
-
-            <include layout="@layout/customer_provider_layout" />
-
-        </LinearLayout>
-
-    </androidx.core.widget.NestedScrollView>
-
-
-</RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</LinearLayout>

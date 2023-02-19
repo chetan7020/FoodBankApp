@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".provider.ui.ProviderNoticeFragment">
+    tools:context=".customer.provider.CustomerProviderFoodFragment">
 
     <RelativeLayout
         android:id="@+id/relLayout1"
@@ -33,25 +33,18 @@
             android:layout_centerVertical="true"
             android:layout_toStartOf="@+id/ivSearch"
             android:background="@null"
-            android:hint="Search FeedBack Here"
+            android:hint="Search Food Here"
             android:imeOptions="actionSearch"
             android:textColor="@color/black"
             android:textSize="15sp" />
 
     </RelativeLayout>
 
-    <androidx.core.widget.NestedScrollView
+    <LinearLayout
+        android:id="@+id/llData"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/relLayout1">
-
-        <LinearLayout
-            android:id="@+id/llData"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingHorizontal="10dp" />
-
-    </androidx.core.widget.NestedScrollView>
+        android:layout_below="@+id/relLayout1"
+        android:orientation="vertical" />
 
 </RelativeLayout>

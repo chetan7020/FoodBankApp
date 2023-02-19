@@ -2,17 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/customer_navigation_ordered_food"
-        android:icon="@drawable/ic_home_black_24dp"
-        android:title="Ordered Food" />
-
-    <item
-        android:id="@+id/customer_navigation_provider"
+        android:id="@+id/provider"
         android:icon="@drawable/ic_dashboard_black_24dp"
         android:title="Provider" />
 
     <item
-        android:id="@+id/customer_navigation_profile"
+        android:id="@+id/order_food"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Ordered Food" />
+
+
+    <item
+        android:id="@+id/profile"
         android:icon="@drawable/profile"
         android:title="Profile" />
 

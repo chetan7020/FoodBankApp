@@ -41,7 +41,7 @@
 
     </RelativeLayout>
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/relLayout1">
@@ -66,7 +66,7 @@
                     android:gravity="center"
                     android:text="Your All"
                     android:textColor="@color/black"
-                    android:textSize="20sp" />
+                    android:textSize="24sp"/>                    />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -76,7 +76,7 @@
                     android:gravity="center"
                     android:text="Foods"
                     android:textColor="@color/green"
-                    android:textSize="20sp" />
+                    android:textSize="24sp"/>                    />
 
             </LinearLayout>
 
@@ -88,8 +88,7 @@
                 android:orientation="vertical" />
         </LinearLayout>
 
-
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAdd"
@@ -100,8 +99,10 @@
         android:layout_gravity="bottom|end"
         android:layout_marginRight="30dp"
         android:layout_marginBottom="30dp"
-        android:backgroundTint="@color/white"
-        android:src="@drawable/plus"
-        app:maxImageSize="57dp" />
+        android:src="@drawable/addbtnsvg"
+        app:backgroundTint="@color/white"
+        app:maxImageSize="57dp"
+        />
+
 
 </RelativeLayout>
