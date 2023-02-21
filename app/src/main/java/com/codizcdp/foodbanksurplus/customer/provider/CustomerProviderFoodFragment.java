@@ -10,11 +10,16 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.codizcdp.foodbanksurplus.R;
+import com.codizcdp.foodbanksurplus.customer.model.ProviderFood;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -30,13 +35,19 @@ public class CustomerProviderFoodFragment extends Fragment {
     private LinearLayout llData;
     private View view;
     private FirebaseFirestore firebaseFirestore;
-    String email;
+
+    private FirebaseAuth firebaseAuth;
+    String email, providerName;
+
     private void initialize() {
         llData = view.findViewById(R.id.llData);
 
         firebaseFirestore = FirebaseFirestore.getInstance();
 
+        firebaseAuth = FirebaseAuth.getInstance();
+
         email = getArguments().getString("email");
+        providerName = getArguments().getString("providerName");
     }
 
     private void init() {
@@ -46,7 +57,8 @@ public class CustomerProviderFoodFragment extends Fragment {
     }
 
     private void displayFood() {
-        firebaseFirestore.collection( email+ "_food")
+        Log.d(TAG, "displayFood: " + email);
+        firebaseFirestore.collection(email + "_food")
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
@@ -58,15 +70,15 @@ public class CustomerProviderFoodFragment extends Fragment {
                             String type = dc.getDocument().getData().get("type").toString();
                             switch (dc.getType()) {
                                 case ADDED:
-                                    Log.d(TAG, "onEvent: ADDED"+dc.getDocument().getData());
-                                    createCard(id, dishName, expiryTime, category, type);
+                                    Log.d(TAG, "onEvent: ADDED" + dc.getDocument().getData());
+                                    createCard(id, providerName, dishName, expiryTime, category, type);
                                     break;
                                 case MODIFIED:
-                                    Log.d(TAG, "onEvent: MODIFIED"+dc.getDocument().getData());
-                                    updateFood(id, dishName, expiryTime, category, type);
+                                    Log.d(TAG, "onEvent: MODIFIED" + dc.getDocument().getData());
+                                    updateFood(id, providerName, dishName, expiryTime, category, type);
                                     break;
                                 case REMOVED:
-                                    Log.d(TAG, "onEvent: REMOVED"+dc.getDocument().getData());
+                                    Log.d(TAG, "onEvent: REMOVED" + dc.getDocument().getData());
                                     for (int i = 0; i < llData.getChildCount(); i++) {
 
                                         TextView tvID = llData.getChildAt(i).findViewById(R.id.tvID);
@@ -85,7 +97,7 @@ public class CustomerProviderFoodFragment extends Fragment {
                 });
     }
 
-    private void updateFood(String id, String dishName, String expiryTime, String category, String type) {
+    private void updateFood(String id, String providerName, String dishName, String expiryTime, String category, String type) {
         for (int i = 0; i < llData.getChildCount(); i++) {
 
             TextView tvID = llData.getChildAt(i).findViewById(R.id.tvID);
@@ -93,6 +105,7 @@ public class CustomerProviderFoodFragment extends Fragment {
             TextView tvExpiryTime = llData.getChildAt(i).findViewById(R.id.tvExpiryTime);
             TextView tvCategory = llData.getChildAt(i).findViewById(R.id.tvCategory);
             TextView tvType = llData.getChildAt(i).findViewById(R.id.tvType);
+            TextView tvProviderName = llData.getChildAt(i).findViewById(R.id.tvProviderName);
 
 
             if (tvID.getText().toString().trim().equals(id)) {
@@ -100,6 +113,7 @@ public class CustomerProviderFoodFragment extends Fragment {
                 tvExpiryTime.setText(expiryTime);
                 tvCategory.setText(category);
                 tvType.setText(type);
+                tvProviderName.setText(providerName);
 
                 Toast.makeText(getActivity(), "Food Data Updated", Toast.LENGTH_SHORT).show();
             }
@@ -107,23 +121,55 @@ public class CustomerProviderFoodFragment extends Fragment {
         }
     }
 
-    private void createCard(String id, String dishName, String expiryTime, String category, String type) {
+    private void createCard(String id, String providerName, String dishName, String expiryTime, String category, String type) {
         View foodView = getLayoutInflater().inflate(R.layout.layout_for_customer_all_food, null, false);
 
-        TextView tvID, tvFoodTitle, tvExpiryTime, tvCategory, tvType;
+        TextView tvID, tvFoodTitle, tvExpiryTime, tvCategory, tvType, tvProviderName;
 
+        Button btnPlaceOrder;
 
         tvID = foodView.findViewById(R.id.tvID);
         tvFoodTitle = foodView.findViewById(R.id.tvFoodTitle);
         tvExpiryTime = foodView.findViewById(R.id.tvExpiryTime);
         tvCategory = foodView.findViewById(R.id.tvCategory);
         tvType = foodView.findViewById(R.id.tvType);
+        tvProviderName = foodView.findViewById(R.id.tvProviderName);
+
+        btnPlaceOrder = foodView.findViewById(R.id.btnPlaceOrder);
 
         tvID.setText(id);
         tvFoodTitle.setText(dishName);
         tvExpiryTime.setText(expiryTime);
         tvCategory.setText(category);
         tvType.setText(type);
+        tvProviderName.setText(providerName);
+        btnPlaceOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String id = tvID.getText().toString();
+
+                ProviderFood providerFood = new ProviderFood(id, email);
+
+                firebaseFirestore
+                        .collection("Customer")
+                        .document(firebaseAuth.getCurrentUser().getEmail().toString())
+                        .collection("provider")
+                        .document(id)
+                        .set(providerFood)
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+                                Toast.makeText(getActivity(), "Order Placed", Toast.LENGTH_SHORT).show();
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        });
+            }
+        });
 
         llData.addView(foodView);
     }

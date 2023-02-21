@@ -34,9 +34,10 @@ public class CustomerProviderFragment extends Fragment {
 
     private FirebaseFirestore firebaseFirestore;
 
-    private void replaceFragment(Fragment fragment, String email) {
+    private void replaceFragment(Fragment fragment, String email, String providerName) {
         Bundle args = new Bundle();
         args.putString("email", email);
+        args.putString("providerName", providerName);
         fragment.setArguments(args);
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -73,14 +74,15 @@ public class CustomerProviderFragment extends Fragment {
                             String available = dc.getDocument().getData().get("available").toString();
                             String timeFrom = dc.getDocument().getData().get("timeFrom").toString();
                             String timeTo = dc.getDocument().getData().get("timeTo").toString();
+                            String providerName = dc.getDocument().getData().get("name").toString();
                             switch (dc.getType()) {
                                 case ADDED:
                                     Log.d(TAG, "onEvent: ADDED" + dc.getDocument().getData());
-                                    createCard(id, companyName, available, email, timeFrom, timeTo, location);
+                                    createCard(id, providerName, companyName, available, email, timeFrom, timeTo, location);
                                     break;
                                 case MODIFIED:
                                     Log.d(TAG, "onEvent: MODIFIED" + dc.getDocument().getData());
-                                    updateProvider(id, companyName, available, email, timeFrom, timeTo, location);
+                                    updateProvider(id, providerName, companyName, available, email, timeFrom, timeTo, location);
                                     break;
                                 case REMOVED:
                                     Log.d(TAG, "onEvent: REMOVED" + dc.getDocument().getData());
@@ -102,10 +104,9 @@ public class CustomerProviderFragment extends Fragment {
                 });
     }
 
-    private void updateProvider(String id, String companyName, String available, String email, String timeFrom, String timeTo, String location) {
+    private void updateProvider(String id, String providerName, String companyName, String available, String email, String timeFrom, String timeTo, String location) {
         for (int i = 0; i < llData.getChildCount(); i++) {
-            TextView tvID, tvCompanyName, tvAvailable, tvEmail, tvLocation, tvTime;
-            Log.d(TAG, "updateProvider: Pass1");
+            TextView tvID, tvCompanyName, tvAvailable, tvEmail, tvLocation, tvTime, tvProviderName;
 
             tvID = llData.getChildAt(i).findViewById(R.id.tvID);
             tvCompanyName = llData.getChildAt(i).findViewById(R.id.tvCompanyName);
@@ -113,6 +114,7 @@ public class CustomerProviderFragment extends Fragment {
             tvEmail = llData.getChildAt(i).findViewById(R.id.tvEmail);
             tvLocation = llData.getChildAt(i).findViewById(R.id.tvLocation);
             tvTime = llData.getChildAt(i).findViewById(R.id.tvTime);
+            tvProviderName = llData.getChildAt(i).findViewById(R.id.tvProviderName);
 
 
             if (tvID.getText().toString().trim().equals(id)) {
@@ -122,19 +124,19 @@ public class CustomerProviderFragment extends Fragment {
                 tvEmail.setText(email);
                 tvLocation.setText(location);
                 tvTime.setText(timeFrom + "-" + timeTo);
+                tvProviderName.setText(providerName);
 
             }
 
         }
     }
 
-    private void createCard(String id, String companyName, String available, String email, String timeFrom, String timeTo, String location) {
+    private void createCard(String id, String providerName, String companyName, String available, String email, String timeFrom, String timeTo, String location) {
         View providerView = getLayoutInflater().inflate(R.layout.customer_provider_layout, null, false);
 
-        TextView tvID, tvCompanyName, tvAvailable, tvEmail, tvLocation, tvTime;
+        TextView tvID, tvCompanyName, tvAvailable, tvEmail, tvLocation, tvTime, tvProviderName;
         LinearLayout llCPLayout;
 
-//createCard(id, companyName, available, email, timeFrom, timeTo, location);
 
         tvID = providerView.findViewById(R.id.tvID);
         tvCompanyName = providerView.findViewById(R.id.tvCompanyName);
@@ -142,10 +144,12 @@ public class CustomerProviderFragment extends Fragment {
         tvEmail = providerView.findViewById(R.id.tvEmail);
         tvLocation = providerView.findViewById(R.id.tvLocation);
         tvTime = providerView.findViewById(R.id.tvTime);
+        tvProviderName = providerView.findViewById(R.id.tvProviderName);
 
         llCPLayout = providerView.findViewById(R.id.llCPLayout);
 
         tvID.setText(id);
+        tvProviderName.setText(providerName);
         tvCompanyName.setText(companyName);
         tvAvailable.setText(available);
         tvEmail.setText(email);
@@ -155,7 +159,8 @@ public class CustomerProviderFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String email = tvEmail.getText().toString();
-                replaceFragment(new CustomerProviderFoodFragment(), email);
+                String providerName = tvProviderName.getText().toString();
+                replaceFragment(new CustomerProviderFoodFragment(), email, providerName);
             }
         });
 
